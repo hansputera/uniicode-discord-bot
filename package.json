@@ -1,0 +1,38 @@
+{
+  "name": "uniicode-bot",
+  "version": "1.0.0",
+  "description": "Unofficial UNIICODE Discord Bot",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "npm run clean && tsc --noEmit && swc ./src/ -d dist/",
+    "clean": "rimraf dist",
+    "start": "node ."
+  },
+  "keywords": [
+    "uniicode",
+    "active-rank"
+  ],
+  "author": {
+    "name": "Hanif Dwy Putra S",
+    "email": "hanifdwyputrasembiring@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.5.7",
+    "@types/node": "^20.12.12",
+    "drizzle-kit": "^0.21.2",
+    "is-ci": "^3.0.1",
+    "is-git-dirty": "^2.0.2",
+    "rimraf": "^5.0.7",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "xo": "^0.58.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.2",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "postgres": "^3.4.4"
+  }
+}

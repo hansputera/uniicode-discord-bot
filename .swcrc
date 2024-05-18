@@ -1,0 +1,51 @@
+{
+    "$schema": "https://swc.rs/schema.json",
+    "minify": true,
+    "exclude": [
+        "node_modules/",
+        "dist/"
+    ],
+    "module": {
+        "type": "commonjs",
+        "strict": true,
+        "importInterop": "node"
+    },
+    "jsc": {
+        "minify": {
+            "compress": true,
+            "format": {
+                "braces": true,
+                "comments": "all",
+                "beautify": true,
+                "quoteKeys": true,
+                "ecma": 6,
+                "semicolons": true,
+                "keepQuotedProps": true,
+                "maxLineLen": 50
+            },
+            "outputPath": "./dist"
+        },
+        "parser": {
+            "optionalChaining": true,
+            "decorators": true,
+            "functionBind": true,
+            "privateMethod": true,
+            "importMeta": true,
+            "importAssertions": true,
+            "topLevelAwait": false,
+            "decoratorsBeforeExport": true,
+            "nullishCoalescing": true,
+            "syntax": "typescript",
+            "dynamicImport": false
+        },
+        "transform": {
+            "optimizer": {
+                "simplify": true
+            },
+            "treatConstEnumAsEnum": true
+        },
+        "preserveAllComments": true,
+        "loose": true
+    }
+}
+   
