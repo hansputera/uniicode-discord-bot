@@ -1,6 +1,6 @@
 import isCI from 'is-ci';
-import husky from 'husky';
+import huskyInstall from 'husky';
 
 if (!isCI) {
-  husky.install();
+  huskyInstall();
 }

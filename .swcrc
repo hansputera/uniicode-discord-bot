@@ -6,7 +6,7 @@
         "dist/"
     ],
     "module": {
-        "type": "commonjs",
+        "type": "es6",
         "strict": true,
         "importInterop": "node"
     },

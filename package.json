@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Unofficial UNIICODE Discord Bot",
   "main": "dist/src/index.js",
+  "type": "module",
   "scripts": {
     "build": "npm run clean && tsc --noEmit && swc ./src/ -d dist/",
     "clean": "rimraf dist",
-    "start": "node ."
+    "start": "NODE_ENV=development node .",
+    "lint": "xo --fix",
+    "prepare": "node preinstall.js --max-old-space-size=10M",
+    "hook": "node hook.js --max-old-space-size=10M"
   },
   "keywords": [
     "uniicode",
@@ -22,6 +26,7 @@
     "@swc/core": "^1.5.7",
     "@types/node": "^20.12.12",
     "drizzle-kit": "^0.21.2",
+    "husky": "^9.0.11",
     "is-ci": "^3.0.1",
     "is-git-dirty": "^2.0.2",
     "rimraf": "^5.0.7",
