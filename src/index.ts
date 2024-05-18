@@ -1,5 +1,7 @@
 import process from 'node:process';
 import dotenv from 'dotenv';
+import avvio from 'avvio';
+import {discordBootstrap} from './Boostraps/discord-boot.js';
 
 // Initializing .env
 dotenv.config({
@@ -7,4 +9,18 @@ dotenv.config({
   debug: process.env.NODE_ENV === 'development',
 });
 
-process.stdout.write('Hello UNIICODE!');
+const app = avvio();
+
+app.use(discordBootstrap);
+
+app.on('start', () => {
+  console.log('Avvio started');
+});
+
+app.ready((error) => {
+  if (error) {
+    throw error;
+  }
+
+  console.log('Avvio ready');
+});

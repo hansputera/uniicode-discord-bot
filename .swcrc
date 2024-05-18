@@ -28,8 +28,8 @@
         "parser": {
             "optionalChaining": true,
             "decorators": true,
-            "functionBind": true,
-            "privateMethod": true,
+            "functionBind": false,
+            "privateMethod": false,
             "importMeta": true,
             "importAssertions": true,
             "topLevelAwait": false,
@@ -38,14 +38,18 @@
             "syntax": "typescript",
             "dynamicImport": false
         },
+        "paths": {
+            "*": ["node_modules", "src/*"],
+            "@/*": ["src/*"]
+        },
+        "baseUrl": ".",
         "transform": {
             "optimizer": {
                 "simplify": true
             },
             "treatConstEnumAsEnum": true
         },
-        "preserveAllComments": true,
-        "loose": true
+        "preserveAllComments": true
     }
 }
    

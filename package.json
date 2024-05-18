@@ -8,7 +8,7 @@
     "build": "npm run clean && tsc --noEmit && swc ./src/ -d dist/",
     "clean": "rimraf dist",
     "start": "NODE_ENV=development node .",
-    "lint": "xo --fix",
+    "lint": "xo --prettier --fix",
     "prepare": "node preinstall.js --max-old-space-size=10M",
     "hook": "node hook.js --max-old-space-size=10M"
   },
@@ -35,9 +35,12 @@
     "xo": "^0.58.0"
   },
   "dependencies": {
+    "avvio": "^8.3.0",
     "discord.js": "^14.15.2",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.10",
+    "pino": "^9.1.0",
+    "pino-pretty": "^11.0.0",
     "postgres": "^3.4.4"
   }
 }
