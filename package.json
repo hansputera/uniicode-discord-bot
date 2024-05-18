@@ -10,7 +10,8 @@
     "start": "NODE_ENV=development node .",
     "lint": "xo --prettier --fix",
     "prepare": "node preinstall.js --max-old-space-size=10M",
-    "hook": "node hook.js --max-old-space-size=10M"
+    "hook": "node hook.js --max-old-space-size=10M",
+    "drizzle:generate": "drizzle-kit generate"
   },
   "keywords": [
     "uniicode",
